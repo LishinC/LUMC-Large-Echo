@@ -17,12 +17,12 @@
     * 3D+time gray scale image. If there is a movement of the patient or the probe, then there will be artifacts and the image quality is not always great. If acquired nicely then it's used to derive ejection fraction.
 
 ## Acquisition ordering of different views in general
-(patient lay on the side facing its left)
-    1. Parasternal
-    2. Apical
-(patient lay on the back facing the ceiling)
-    3. Subcostical, aka 肋骨下
-    4. Supersternal, aka 胸骨上喉嚨附近
+0. (patient lay on the side facing its left)
+1. Parasternal
+2. Apical
+3. (patient lay on the back facing the ceiling)
+4. Subcostical
+5. Supersternal
 
 ## Acquisition ordering of different types of images at each position
 1. The 2D view  is fist used to get the position of the probe correctly and thus the view correctly
