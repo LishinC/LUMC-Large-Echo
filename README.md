@@ -1,5 +1,22 @@
 # LUMC-Large-Echo
 
+## Replicating the echocv project
+* link is https://bitbucket.org/rahuldeo/echocv/src/master/
+1. Clone the repository and enter the folder
+```
+git clone https://bitbucket.org/rahuldeo/echocv.git
+cd echocv
+```
+2. Inside the echocv folder, manually create a folder called "models". Then download the three checkpoint files whose names start from "view_23_e5_class_11-Mar-2018" from https://www.dropbox.com/sh/0tkcf7e0ljgs0b8/AACBnNiXZ7PetYeCcvb-Z9MSa?dl=0 , and put them inside the "models" folder that was just created.
+3. Now create the virtual environment according to the instructions in README.md. Python 2.7.11 wasn't easy to install, so install Python 2.7.18 for now.
+```
+conda create -n echocv python=2.7
+conda activate echocv
+pip install -r requirements.txt
+```
+4. Now you are free to reproduce the project. For the specific focus of saving the trained tensorflow view-classification model into a Pytorch replicate, put save_as_torch_model.py and pytorch_vgg.py into the echocv folder, and run save_as_torch_model.py .
+
+
 ## Types of images
 * 2D view
     * Gray scale 2D+time videos
