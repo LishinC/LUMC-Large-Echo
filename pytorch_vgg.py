@@ -2,6 +2,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
+#TODO: verify that this structure is identical to the echocv version written in Tensorflow, especially to the pooling and activation layers.
 class VGG(nn.Module):
     def __init__(self, output_dimension):
         super(VGG, self).__init__()
@@ -46,4 +47,3 @@ class VGG(nn.Module):
         x = F.relu(self.fc7(x))
         x = self.fc8(x)
         return x
-#TODO: verify pooling and activations
