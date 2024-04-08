@@ -14,7 +14,7 @@
    conda activate echocv
    pip install -r requirements.txt
    ```
-4. Now you are free to reproduce the project. For the specific focus of saving the trained tensorflow view-classification model into a Pytorch replicate, put save_as_torch_model.py and pytorch_vgg.py into the echocv folder, and run save_as_torch_model.py .
+4. Now you are free to reproduce the project. For the specific focus of saving the trained tensorflow view-classification model into a Pytorch replicate, put save_as_torch_model.py and pytorch_vgg.py into the echocv folder, and run save_as_torch_model.py . These scripts are derived from predict_viewclass_v2.py and nets/vgg.py in the original echocv repository.
 
 
 ## Types of images
