@@ -1,5 +1,25 @@
 # LUMC-Large-Echo
 
+## Planning
+1. **Model inference**: apply the pretrained model on the 200 labeled LUMC validation cases
+    * For the 23 previously-seen views	-> see accuracy
+    * For all other unseen 2D views		-> see embedding & uncertainty
+    * For all other unseen image types	-> see embedding & uncertainty
+2. **Decision making**:
+    * If the accuracy on the 23 views is low -> proceed to step 3 to improve the accuracy on the 23 class
+    * If the accuracy on the 23 views is high but the uncertainty for the unseen views is low that they're often confidently mis-classified into one of the 23 classes -> proceed to step 3 to better classify the unseen
+    * If accuracy on the 23 views is high & uncertainty for the unseen views is high -> The model can already be applied on the whole LUMC data to identify the 23 views and the uncertain (potentially the unseen) ones
+3. **Model improving**: label a few more cases for training
+    * Keep the model architecture:
+        * Fine tune the model
+        * Semi-supervised learning
+        * Identify cluster centers ...
+        * Self-supervised learning
+        * Few-shot learning
+    * Altering the model architecture:
+        * Corase classification -> detailed classification (e.g. first identify PLAX/PSAX/Apical/Subcostal then identify subclasses with 4 dedicated models; Or, first identify image type then identify subclasses with dedicated mdoels)
+        * Better utlization of the temporal information in the clips (e.g. use 3D CNN or 2D CNN + LSTM for the clips.)
+
 ## Replicating the echocv project
 * link is https://bitbucket.org/rahuldeo/echocv/src/master/
 1. Clone the repository and enter the folder
